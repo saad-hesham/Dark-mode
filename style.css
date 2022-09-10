@@ -1,0 +1,69 @@
+/*Genral styling*/
+body{
+    font-family: 'Courier New', Courier, monospace;
+    transition: all ease .5s;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/*button styling (normal mode)*/
+.button {
+    position: relative;
+background-image: url("./images/images.jfif");
+background-size: cover;
+    width: 7em;
+    height: 3em;
+    border-radius: 5em;
+    cursor: pointer;
+}
+.button >span{
+    position: absolute;
+    background: white;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    animation:moveLeft .5s ease 0s forwards
+
+}
+/*body styling in dark mode*/
+body.dark{
+    background-color: rgb(14, 14, 14);
+}
+body.dark h1,body.dark p{
+    color: white;
+}
+
+/*button styling (dark mode)*/
+body.dark .button {
+    position: relative;
+background-image: url("./images/night-sky_1419808.jpg");
+background-size: cover;
+    width: 7em;
+    height: 3em;
+    border-radius: 5em;
+    cursor: pointer;
+}
+body.dark span{
+    animation:moveRight .5s ease 0s forwards
+}
+/* creating animation for the button*/
+@keyframes moveRight{
+
+    from{
+        left: 0;
+    }
+    to{
+        left: 57%;
+    }
+}
+@keyframes moveLeft{
+
+    from{
+        left: 57%;
+    }
+    to{
+        left: 0%;
+    }
+}
